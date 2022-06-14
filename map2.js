@@ -6,3 +6,6 @@ let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 // e.g. "36 is larger than 30"
 
 //Your code here
+const numbersSquared = numbers.map(n => n ** 2);
+const filteredSquares = numbersSquared.filter(n => n > 30);
+filteredSquares.forEach(n => console.log(n, "is larger than 30"));
