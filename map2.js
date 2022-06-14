@@ -6,3 +6,15 @@ let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 // e.g. "36 is larger than 30"
 
 //Your code here
+
+const numberEdit = numbers.map(number => {
+    return Math.pow(number, 2)
+})
+
+console.log(numberEdit)
+
+const largerThan30 = numberEdit.filter(number2 => {
+    console.log(number2 + ' is larger than 30')
+    return number2 > 30
+})
+console.log(largerThan30)

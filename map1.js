@@ -40,3 +40,8 @@ let forecast = [
 // "Monday will have a high of 55F and a low of 53F."
 
 //Your code here
+
+const daysAreLike = forecast.map((prediction) => {
+    console.log(prediction.day + ' will have a high of ' + prediction.high + ' and a low of ' + prediction.low + ' ')
+})
+console.log(daysAreLike)
