@@ -22,3 +22,7 @@ let people = [
 let isCool = person => person.coolnessScore > 20
 
 // Your code goes here
+
+let coolio = people.filter(element => isCool(element))
+
+console.log(coolio)

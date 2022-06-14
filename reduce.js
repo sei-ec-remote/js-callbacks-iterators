@@ -5,6 +5,9 @@ const numbers = [1, 56, 2, 4, 1, 99, 3, 5]
 // Write something that takes the above array and returns the product of all the numbers
 // via multiplication
 
+let sum = numbers.reduce((sum, curr) => sum + curr)
+console.log(sum)
+
 // Use reduce to get the sum of all the numbers
 
 // Hungry for more:
@@ -33,8 +36,23 @@ const cities = [
 ]
 
 // Use reduce to get the sum of the population of all 5 cities
+console.log(
+      cities.reduce((sum, curr) => {
+            return sum + curr.population
+      }, 0)
+)
 
 // Use reduce to get the city with the highest population (output should be an object)
+console.log(
+      cities.reduceRight((sum, curr) => {
+            if(curr.population > sum.population) {
+                  return curr
+            }
+            else{
+                  return sum
+            }
+      },cities[0])
+)
 
 // Even hungrier:
 
@@ -87,7 +105,20 @@ const developers = [
 // This one is HARD
 
 // Hint 1: the desired output is an object, you might want to use that as your initial value
-
+console.log(
+      developers.reduce((sum, curr) => {
+            for(let i = 0;i < curr.languages.length; i++){
+                  let currentLang = curr.languages[i]
+              if (sum.hasOwnProperty(currentLang)){
+                  sum[currentLang] = sum[currentLang] + 1
+              }
+              else{
+                    sum[currentLang] = 1
+              }  
+            }
+            return sum
+      }, {})
+)
 
 
 // Hint 2: Each developer's languages is stored in an array. You might need to iterate over it.

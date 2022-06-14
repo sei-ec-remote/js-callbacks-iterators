@@ -6,3 +6,7 @@ let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 // e.g. "36 is larger than 30"
 
 //Your code here
+
+let final = numbers.map((e) => e * e).filter((f) => f > 30)
+
+final.forEach(element => console.log(element + " is greater than 30"))
