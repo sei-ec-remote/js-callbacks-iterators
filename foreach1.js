@@ -8,4 +8,8 @@
  
 let foods = ["pizza", "tacos", "ice cream", "sushi"];
 
+foods.forEach((foods) => {
+    console.log(`I like ${foods}`)
+})
 // your code here
+
