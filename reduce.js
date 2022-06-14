@@ -5,6 +5,9 @@ const numbers = [1, 56, 2, 4, 1, 99, 3, 5]
 // Write something that takes the above array and returns the product of all the numbers
 // via multiplication
 
+let sum = numbers.reduce((sum, curr) => sum + curr)
+console.log(sum)
+
 // Use reduce to get the sum of all the numbers
 
 // Hungry for more:
@@ -33,8 +36,23 @@ const cities = [
 ]
 
 // Use reduce to get the sum of the population of all 5 cities
+console.log(
+      cities.reduce((sum, curr) => {
+            return sum + curr.population
+      }, 0)
+)
 
 // Use reduce to get the city with the highest population (output should be an object)
+console.log(
+      cities.reduceRight((sum, curr) => {
+            if(curr.population > sum.population) {
+                  return curr
+            }
+            else{
+                  return sum
+            }
+      },cities[0])
+)
 
 // Even hungrier:
 
