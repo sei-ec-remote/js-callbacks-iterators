@@ -11,4 +11,8 @@ let foods = [
 ];
 
 // your code here
+const goodFoods = foods.forEach((food) => {
+  return console.log(`${food.name} is ${food.level} delicious`)
+})
+console.log(goodFoods)
 

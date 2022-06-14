@@ -34,8 +34,15 @@ const cities = [
 
 // Use reduce to get the sum of the population of all 5 cities
 
+const addPopulation = cities.reduce((world, city) => {
+    return city.population + world ;
+}, 0)
+console.log(addPopulation)
 // Use reduce to get the city with the highest population (output should be an object)
-
+// const highestPopulation = cities.reduce((world, city) => {
+//       return city.population + world ;
+//   }, 0)
+//   console.log(addPopulation)
 // Even hungrier:
 
 const developers = [
@@ -85,6 +92,21 @@ const developers = [
 // }
 
 // This one is HARD
+
+// reduce has optional second argument
+// this will stand for the initial value
+// const ageSum = instructors.reduce((sum, instructor) => {
+//     return sum + instructor.age ;
+// }, 0)
+
+// console.log(ageSum)
+
+// const makeSum = (num1, num2) => {
+//       return num1 + num2.age
+//   }
+//   const ageSum = instructors.reduce(makeSum, 0)
+//   console.log(ageSum)
+    
 
 // Hint 1: the desired output is an object, you might want to use that as your initial value
 

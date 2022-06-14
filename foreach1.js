@@ -9,3 +9,8 @@
 let foods = ["pizza", "tacos", "ice cream", "sushi"];
 
 // your code here
+
+const iLikeFoods = foods.filter((food) => {
+    return console.log("I like " + food)
+})
+console.log(iLikeFoods)
