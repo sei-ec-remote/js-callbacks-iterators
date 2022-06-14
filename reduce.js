@@ -1,6 +1,9 @@
 const numbers = [1, 56, 2, 4, 1, 99, 3, 5]
 
 // Your code here!
+const numbersProduct = numbers.reduce((prod, n) => { return prod * n; });
+const numbersSum = numbers.reduce((sum, n) => { return sum + n; });
+console.log(numbersProduct);
 
 // Write something that takes the above array and returns the product of all the numbers
 // via multiplication
@@ -33,8 +36,14 @@ const cities = [
 ]
 
 // Use reduce to get the sum of the population of all 5 cities
+const popSum = cities.reduce((sum, city) => { return sum + city.population; }, 0);
+console.log(popSum);
 
 // Use reduce to get the city with the highest population (output should be an object)
+const highestPop = cities.reduce((highest, city) => {
+      return (city.population > highest.population ? city : highest);
+});
+console.log(highestPop);
 
 // Even hungrier:
 
@@ -71,6 +80,15 @@ const developers = [
         ]
   }
 ]
+
+const languageCount = developers.reduce((countObj, developer) => {
+      developer.languages.forEach(language => {
+            countObj[language] === undefined ? countObj[language] = 1 : countObj[language]++;
+      })
+      
+      return countObj;
+}, {});
+console.log(languageCount);
 
 // Use reduce to return an object with each languages as a property
 // And the number of developers who know that language as that property's value
