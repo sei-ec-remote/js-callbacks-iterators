@@ -105,7 +105,20 @@ const developers = [
 // This one is HARD
 
 // Hint 1: the desired output is an object, you might want to use that as your initial value
-
+console.log(
+      developers.reduce((sum, curr) => {
+            for(let i = 0;i < curr.languages.length; i++){
+                  let currentLang = curr.languages[i]
+              if (sum.hasOwnProperty(currentLang)){
+                  sum[currentLang] = sum[currentLang] + 1
+              }
+              else{
+                    sum[currentLang] = 1
+              }  
+            }
+            return sum
+      }, {})
+)
 
 
 // Hint 2: Each developer's languages is stored in an array. You might need to iterate over it.
