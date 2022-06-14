@@ -1,11 +1,20 @@
 const numbers = [1, 56, 2, 4, 1, 99, 3, 5]
 
 // Your code here!
-
+const numSum = numbers.reduce((total, current) => {
+      return total + current
+})
+console.log(numSum)
 // Write something that takes the above array and returns the product of all the numbers
 // via multiplication
-
+const numProd = numbers.reduce((total, current) => {
+      return total * current
+})
+console.log(numProd)
 // Use reduce to get the sum of all the numbers
+
+
+
 
 // Hungry for more:
 
@@ -32,8 +41,20 @@ const cities = [
   }
 ]
 
+const totalPop = cities.reduce((total, current) => {
+      return total + current.population
+}, 0)
+console.log(totalPop)
+
+
+
 // Use reduce to get the sum of the population of all 5 cities
 
+
+
+const biggest = cities.reduce((total, current) => {
+      
+}, 0)
 // Use reduce to get the city with the highest population (output should be an object)
 
 // Even hungrier:
