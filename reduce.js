@@ -6,6 +6,8 @@ const numbers = [1, 56, 2, 4, 1, 99, 3, 5]
 // via multiplication
 
 // Use reduce to get the sum of all the numbers
+const multipliedSum = numbers.reduce((acc, curr) => {return acc * curr})
+console.log(multipliedSum)
 
 // Hungry for more:
 
@@ -33,8 +35,18 @@ const cities = [
 ]
 
 // Use reduce to get the sum of the population of all 5 cities
+const popSum = cities.reduce((total, curr) => {
+      return total + curr.population
+}, 0)
+console.log(popSum)
 
 // Use reduce to get the city with the highest population (output should be an object)
+// this doesn't work, no idea why!
+const largestPop = cities.reduce((largest, current) => {
+      return largest
+})
+
+console.log(largestPop)
 
 // Even hungrier:
 
@@ -49,8 +61,8 @@ const developers = [
   {
         name: 'Maria',
         languages:  [
-                'JavaScript',
-                'Ruby'
+            'JavaScript',
+            'Ruby'
             ]
   },
   {
