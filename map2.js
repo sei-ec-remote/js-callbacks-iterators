@@ -6,3 +6,10 @@ let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 // e.g. "36 is larger than 30"
 
 //Your code here
+const square = (num) => {
+    for (let i = 1; i < num.length; i++) {
+        return Math.pow(numbers[i], 2)
+    }
+}
+//function square = numbers.Math.pow([i], 2)
+console.log(square(numbers))
