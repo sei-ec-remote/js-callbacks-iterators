@@ -7,14 +7,14 @@ let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 //Your code here
 
-const numberEdit = numbers.map(number => {
-    return Math.pow(number, 2)
+const squaredArray = numbers.map(nums => {
+    return nums ** 2
 })
 
-console.log(numberEdit)
-
-const largerThan30 = numberEdit.filter(number2 => {
-    console.log(number2 + ' is larger than 30')
-    return number2 > 30
+const filteredArray = squaredArray.filter((nums) => {
+      return nums > 30
 })
-console.log(largerThan30)
+
+filteredArray.forEach((nums) => {
+    console.log(`${nums} is larger than 30`)
+})
